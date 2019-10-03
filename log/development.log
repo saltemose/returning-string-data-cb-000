@@ -1588,3 +1588,16 @@ Cannot render console from 172.58.188.28! Allowed networks: 127.0.0.1, ::1, 127.
 
 Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 172.58.188.28 at 2019-10-03 20:14:15 +0000
 Cannot render console from 172.58.188.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/1/body" for 172.58.188.28 at 2019-10-03 20:18:18 +0000
+Cannot render console from 172.58.188.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#body as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  app/controllers/posts_controller.rb:30:in `body'
+
+
